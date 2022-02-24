@@ -144,6 +144,23 @@ button_tertiary,
   opacity: 0.9;
 }
 
+.button_submit {
+  background-color: var(--cta-color);
+  color: var(--primary-color);
+  border: none;
+  display: inline-block;
+  font-family: var(--button-font-family);
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.button_submit:hover,
+.button_submit:focus {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
 header {
   background-color: var(--text-color);
   text-align: center;
@@ -338,13 +355,25 @@ box-shadow: 25px 100px 70px 0 rgba(0,0,0,0.25);
   margin-top: 20px;
 }
 
-.about-me, .contact-info {
+.about-me {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 45px;
   padding-left: 20px;
   padding-bottom: 20px;
+  text-align: left;
 }
 
-.about-me-header, .portfolio-header, .about-me {
-  margin: auto;
+.contact-info {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me-header, .portfolio-header, .contact-header {
+  margin: 0;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 45px;
