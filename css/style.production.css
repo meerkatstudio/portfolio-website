@@ -5,6 +5,8 @@
 * Browsers: last 2 versions
 */
 
+/* Following code sets variables for this document */
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -69,6 +71,8 @@ a:active {
   color: #772E25;
 }
 /* ------ End: Content link colors ------ */
+
+/* Following code styles all buttons */
 
 button {
   /* Styles the button */
@@ -204,6 +208,25 @@ button_tertiary {
   /* Reduces the opacity of the button to 80% */
   opacity: 0.9;
 }
+
+.button_submit {
+  background-color: #772E25;
+  color: #FFF;
+  border: none;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.button_submit:hover,
+.button_submit:focus {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Following code is about navbar behaviour for screens of less than 500px width including logo and social icons */
 
 header {
   background-color: #283D3B;
@@ -447,13 +470,34 @@ nav a::before {
   margin-top: 20px;
 }
 
-.about-me, .contact-info {
+.about-me {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 45px;
   padding-left: 20px;
   padding-bottom: 20px;
+  text-align: left;
 }
 
-.about-me-header, .portfolio-header, .about-me {
-  margin: auto;
+.contact-info {
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-me-header, .portfolio-header, .contact-header {
+  margin: 0;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 45px;
@@ -504,7 +548,8 @@ nav a::before {
 }
 
 #about-picture {
-  padding: 0 100px;
+  margin: 0;
+  width: auto;
 }
 
 /* Following code makes grid items on /portfolio responsive */
@@ -536,7 +581,7 @@ nav a::before {
   }
 }
 
-/* Following code is about navbar behaviour for screens of more than 500px width */
+/* Following code is about navbar behaviour for screens of more than 500px width including logo and social icons */
 
 @media screen and (min-width: 500px) {
   .nav-toggle-label {
@@ -590,7 +635,7 @@ nav a::before {
             align-items: center;
   }
 
-  /* .social-github, */
+  /* .social-github = left icon, no padding needed */
   .social-twitter,
   .social-linkedin {
     margin: 0;
@@ -662,6 +707,8 @@ nav a::before {
   }
 }
 
+/* Following code takes care of animation features on /about */
+
 @-webkit-keyframes color-change {
   0% {
     fill: #EDC655;
@@ -709,17 +756,6 @@ nav a::before {
 }
 
 @-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
-}
-
-@keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(446px, 48px);
             transform: translate(446px, 48px);
