@@ -1,3 +1,5 @@
+/* Following code sets variables for this document */
+
 :root {
   --text-color: #283D3B;
   --primary-color: #FFF;
@@ -85,6 +87,8 @@ a:active {
 }
 /* ------ End: Content link colors ------ */
 
+/* Following code styles all buttons */
+
 button,
 button_secondary,
 button_tertiary,
@@ -160,6 +164,8 @@ button_tertiary,
     cursor: pointer;
     opacity: 0.9;
 }
+
+/* Following code is about navbar behaviour for screens of less than 500px width including logo and social icons */
 
 header {
   background-color: var(--text-color);
@@ -441,7 +447,7 @@ box-shadow: 25px 100px 70px 0 rgba(0,0,0,0.25);
   }
 }
 
-/* Following code is about navbar behaviour for screens of more than 500px width */
+/* Following code is about navbar behaviour for screens of more than 500px width including logo and social icons */
 
 @media screen and (min-width: 500px) {
   .nav-toggle-label {
@@ -474,7 +480,7 @@ box-shadow: 25px 100px 70px 0 rgba(0,0,0,0.25);
     align-items: center;
   }
 
-  /* .social-github, */
+  /* .social-github = left icon, no padding needed */
   .social-twitter,
   .social-linkedin {
     margin: 0;
@@ -527,6 +533,8 @@ box-shadow: 25px 100px 70px 0 rgba(0,0,0,0.25);
     margin: 0;
   }
 }
+
+/* Following code takes care of animation features on /about */
 
 @keyframes color-change {
   0% {
