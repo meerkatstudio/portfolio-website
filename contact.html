@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meerkat Studio - Contact</title>
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Vollkorn+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.production.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="./img/personal_logo_icon.svg" alt="Personal logo of Patrick Lemmer" class="logo">
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul class="topbottombordersout">
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+        <li>
+          <a href="about.html">ABOUT ME</a>
+        </li>
+        <li>
+          <a href="portfolio.html">PORTFOLIO</a>
+        </li>
+        <li>
+          <a href="contact.html">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+    <div class="contact-info">
+      Patrick Lemmer<br>
+      Bachstraße 3<br>
+      16321 Bernau<br>
+      Germany<br>
+      <br>
+      phone: <a href="tel:+491737950392">+49 1737950392</a><br>
+      Skype: <a href="skype:https://join.skype.com/invite/OUyM3MTYnk6a">patricklemmer</a><br>
+      <a href="mailto:patricklemmersa@gmail.com">patricklemmersa@gmail.com</a><br>
+      <a href="mailto:patricklemmersa@gmail.com">Contact me via email</a>
+      </div>
+      <div class="contact-form__box">
+        <form action="" method="post" id="contact-form">
+          <label class="standard-label" for="contact-firstname">Name:* </label>
+          <input type="text" id="contact-firstname" name="firstname">
+          <label class="standard-label" for="contact-lastname">Last name:* </label>
+          <input type="text" id="contact-lastname" name="lastname">
+          <label class="standard-label" for="contact-email">E-mail:* </label>
+          <input type="email" id="contact-email" required>
+          <label class="standard-label" for="contact-phone">Telephone: </label>
+          <input type="tel" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+          <label class="standard-label" for="contact-message">Message:* </label>
+          <textarea maxlength="240" id="contact-message" required></textarea>
+
+          <input type="submit" class="button" value="Send message">
+        </form>
+      </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>Find me on</p>
+    <div class="social-media">
+      <a href="https://github.com/meerkatstudio" target="_blank"><img src="img/github_icon_bw.svg" alt="Github icon"></a>
+      <a href="https://twitter.com/meerkatstudio_" target="_blank"><img src="img/twitter_icon_color.svg" alt="Twitter icon"></a>
+      <a href="https://www.linkedin.com/in/patricklemmer/" target="_blank"><img src="img/linkedin_icon_color.svg" alt="LinkedIn icon"></a>
+    </div>
+  </footer>
+
+  <script src="js/tota11y.min.js"></script>
+
+</body>
+
+</html>

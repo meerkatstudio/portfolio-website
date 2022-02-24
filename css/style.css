@@ -1,0 +1,530 @@
+:root {
+  --text-color: #283D3B;
+  --primary-color: #FFF;
+  --secondary-color: #197278;
+  --accent-color: #C44536;
+  --cta-color: #772E25;
+  --grid-item-background: #EDDDD4;
+  --animation-color-one: #EDC655;
+  --animation-color-two: #FCFFAD;
+  --animation-color-three: #F76414;
+  --animation-navbar-links: #F76414;
+
+
+  --body-font-family: 'Open Sans', sans-serif;
+  --header-font-family: 'Vollkorn SC', arial;
+  --button-font-family: 'Roboto', sans-serif;
+  --link-font-family: 'Roboto', sans-serif;
+
+  --body-font-size: 15px;
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 18.72px;
+  --h4-font-size: 16px;
+  --h5-font-size: 14px;
+  --h6-font-size: 12px;
+
+  --line-height: 22.5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-family: var(--header-font-family);
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  padding-left: 20px;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+textarea, input {
+  overflow: auto;
+  margin-bottom: 1rem;
+  width: 25%;
+  border: 0.1px solid gray;
+}
+
+/* ------ Start: Content link colors ------ */
+a {
+  color: var(--accent-color);
+}
+
+a:visited {
+  /* visited link */
+  color: var(--secondary-color);
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* active link */
+  color: var(--cta-color);
+}
+/* ------ End: Content link colors ------ */
+
+button,
+button_secondary,
+button_tertiary,
+.button,
+.button_secondary,
+.button_tertiary {
+  /* Styles the button */
+  background-color: var(--cta-color);
+  color: var(--primary-color);
+  /* Overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* Takes the font from outer container */
+  font-family: var(--button-font-family);
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  /* Width of the border, type and color */
+}
+
+.button_secondary {
+  background-color: var(--secondary-color);
+}
+
+.button_tertiary {
+  background-color: var(--secondary-color);
+  box-shadow: 7px 7px 10px 0 rgba(0,0,0,0.25);
+  border: none;
+}
+
+.button,
+.button_secondary {
+  border-bottom: 2px solid rgba (0, 0, 0, 0.3);
+  /* transition: 0.2s opacity; */
+  box-shadow: 5px 5px 30px 0 rgba(0,0,0,0.25);
+  transition: 150ms;
+}
+
+.button:hover,
+.button:focus,
+.button_secondary:hover,
+.button_secondary:focus {
+  box-shadow: 5px 5px 60px 0 rgba(0,0,0,0.25);
+  transform: scale(1.2);
+  transition: 250ms;
+}
+
+.button:hover,
+.button:focus,
+.button_secondary:hover,
+.button_secondary:focus,
+.button_tertiary:hover,
+.button_tertiary:focus {
+  /* Lets the mouse appear a hand when hovering over the button */
+  cursor: pointer;
+  /* Reduces the opacity of the button to 80% */
+  opacity: 0.9;
+}
+
+header {
+  background-color: var(--text-color);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  height: 70px;
+}
+
+.logo {
+  margin: 0;
+  position: relative;
+  padding-top: 5px;
+  align-content: center;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+   display: block;
+   background: var(--primary-color);
+   height: 2px;
+   width: 2em;
+   border-radius: 2px;
+   position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  background-color: var(--text-color);
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  transform: scale(1,0);
+  transform-origin:top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+/* ------ Start: Navigation link colors ------ */
+
+nav a {
+  color: var(--primary-color);
+  font-family: var(--body-font-family);
+  text-decoration: none;
+  font-size: var(--body-font-size);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:visited {
+  color: var(--primary-color);
+}
+
+nav a:active {
+  color: var(--accent-color);
+}
+
+/* ------ End: Navigation link colors ------ */
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 1.5px;
+    background: var(--animation-navbar-links);
+    position: relative;
+    bottom: -1.5em;
+    left: 0;
+    right: 0;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+  .social-media {
+    display: none;
+  }
+
+/* Intro section on home.html with profile image and short intro */
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+
+/* Grid fallback */
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+@supports (display:grid) {
+.project-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  margin: 0;
+  padding: 0px 70px 0px 70px;
+  }
+}
+
+.grid__item {
+  background-color: var(--grid-item-background);
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 25px 25px 30px 0 rgba(0,0,0,0.25);
+  transition: 300ms; box-shadow: 300ms;
+}
+
+.grid__item:hover {
+transform: scale(1.1);
+box-shadow: 25px 100px 70px 0 rgba(0,0,0,0.25);
+}
+
+.grid__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+.page-footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.about-me, .contact-info {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.about-me-header, .portfolio-header, .about-me {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.standard-label {
+  padding-bottom: 10px;
+  margin: auto;
+  width: 25%;
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#red-underline {
+  /* Underlining of personal keywords */
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+#about-picture {
+  padding: 0 100px;
+}
+
+/* Following code makes grid items on /portfolio responsive */
+
+@media all and (max-width: 500px) {
+  .project-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-list-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list-grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* Following code is about navbar behaviour for screens of more than 500px width */
+
+@media screen and (min-width: 500px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(900px, 4fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 1 / 2;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .social-media {
+    all: unset;
+    grid-column: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .social-github, */
+  .social-twitter,
+  .social-linkedin {
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  .topbottombordersout a:before, .topbottombordersout a:after {
+      background: var(--animation-navbar-links);
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      content: "";
+      opacity: 0;
+      transition: all 0.3s;
+  }
+
+  .topbottombordersout a:before {
+      top: 0px;
+      transform: translateY(10px);
+  }
+
+  .topbottombordersout a:after {
+      bottom: 0px;
+      transform: translateY(-10px);
+  }
+
+  .topbottombordersout a:hover:before, .topbottombordersout a:hover:after {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--animation-color-one);
+  }
+  50% {
+    fill: var(--animation-color-two);
+  }
+  100% {
+    fill: var(--animation-color-three);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
