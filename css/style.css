@@ -452,7 +452,7 @@ nav a:hover::before {
 
 /* Following code is about navbar behaviour for screens of more than 500px width including logo and social icons */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 991px) {
   .nav-toggle-label {
     display: none;
   }
