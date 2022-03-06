@@ -1,0 +1,1736 @@
+/* Order of document (consistently updated) */
+
+/* 
+
+1. Root variables
+2. Global code
+3. Local code
+3. Navbar
+3.1. /home
+3.2. /about-me
+3.3. /portfolio
+3.4. /contact
+4. Footer
+5. Media queries
+5.1. Navbar
+5.2. Contact form
+6. Keyframes
+6.1. /home
+
+*/
+
+/* Begin root variables */
+
+/* Following code sets variables for this document */
+
+:root {
+  --text-color: #111;
+  --primary-color: #edc655;
+  --accent-color-light: #fff;
+  --accent-color-dark: #525252;
+  --body-font-family: "Staatliches", cursive;
+  --header-font-family: "Staatliches", cursive;
+  --button-font-family: "Staatliches", cursive;
+  --body-font-size: 1rem;
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 18.72px;
+  --h4-font-size: 1rem;
+  --h5-font-size: 14px;
+  --h6-font-size: 12px;
+  --line-height: 22.5px;
+}
+
+/* Begin of global code */
+
+/* General code */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+}
+
+a {
+  color: var(--accent-color-light);
+  text-decoration: none;
+}
+
+/* Begin of local code */
+
+/* Beginn navbar */
+
+/* Following code is styling the navbar for screen width of more than 1200px (Media queries for navbar on other screen sizes below) */
+
+nav {
+  background-color: var(--primary-color);
+  font-family: var(--header-font-family);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.logo {
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:active,
+.logo a:visited {
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color-light);
+}
+
+.button_navbar {
+  background-color: var(--primary-color);
+  font-size: var(--body-font-size);
+  color: var(--text-color);
+  border-radius: 50px;
+  padding: 7px 20px;
+  border: 1px solid var(--accent-color-dark);
+  box-shadow: none;
+}
+
+.button_navbar:hover {
+  background-color: var(--text-color);
+  color: var(--accent-color-light);
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  background-color: var(--text-color);
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Beginn home page */
+
+/* Following code is styling /home */
+
+.main_home {
+  margin: auto;
+  margin-top: 22vh;
+  margin-bottom: 32vh;
+  max-width: 1280px;
+}
+
+/* Following code is styling the intro and animation/image section on /home (temporary styling until text animation (code below) is ready) */
+
+.profile {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 30vh;
+  padding: 30px;
+}
+
+/* Following code is styling the svg next to the intro text on /home  */
+
+#img {
+  margin: auto;
+  justify-content: center;
+}
+
+/* Following code is styling the intro text on /home; temporary styling; will be replace by text-adjective animation (code below) at later stage */
+
+.profile_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--header-font-family);
+  margin: auto;
+  padding: 30px;
+  flex-grow: 2;
+}
+
+.profile_text_big {
+  font-size: calc(var(--body-font-size) + 40px);
+}
+
+.profile_text_small {
+  font-size: calc(var(--body-font-size) + 10px);
+  margin: 30px 0px 15px 0px;
+}
+
+.button_one,
+.button_two,
+.button_three {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: calc(var(--body-font-size) + 10px);
+  border-radius: 3px;
+  margin: auto;
+  padding: 7px 40px;
+  border: 0.5px solid var(--accent-color-dark);
+  box-shadow: 4px 4px 5px var(--text-color);
+}
+
+.button_one:hover,
+.button_two:hover,
+.button_three:hover {
+  background-color: var(--accent-color-light);
+  color: var(--text-color);
+}
+
+.button_two {
+  margin-left: 15px;
+}
+
+.button_three {
+  display: none;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 300px;
+}
+
+.arrow_text {
+  font-size: calc(var(--body-font-size) - 1px);
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.arrow_icon {
+  height: 40px;
+}
+
+#white-underline {
+  /* Underlining of adjective in intro text on /home */
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color-light);
+}
+
+/* Following code is animating the adjective in the intro text on /home; temporarily disabled */
+
+/* .intro_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 84vh;
+}
+
+.intro_line {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  font-family: var(--header-font-family);
+  font-size: 80px;
+  margin-right: 0;
+  width: 60%;
+}
+
+.wrapper {
+  / display: inline-flex; /
+  display: flex;
+  / align-items: center; /
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-right: 0;
+  width: 60%;
+}
+
+.wrapper .static_text {
+  color: var(--text-color);
+  font-family: var(--header-font-family);
+  height: 0px;
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper .dynamic_texts {
+  margin-left: 15px;
+  height: 80px;
+  font-size: 70px;
+  line-height: 120px;
+  overflow: hidden;
+}
+
+.dynamic_texts li {
+  color: var(--accent-color-light);
+  list-style: none;
+  font-size: 80px;
+  font-family: var(--header-font-family);
+  text-transform: uppercase;
+  position: relative;
+  top: 0;
+  animation: slide 6s steps(4) infinite;
+}
+
+.dynamic_texts li span {
+  position: relative;
+}
+
+.dynamic_texts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  animation: typing 2s steps(21) infinite;
+} */
+
+/* Beginn about me page */
+
+/* Following code is styling the grid on /about-me */
+
+/* Grid fallback */
+
+.about_grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* Grid container */
+
+@supports (display: grid) {
+  .grid_container {
+    display: grid;
+    grid-template-rows: repeat(2, 600px);
+    grid-template-columns: repeat(2, 700px);
+    align-content: center;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 120px;
+    width: 75%;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+/* Grid items */
+
+/* Following code is styling the about me flip card */
+
+.flip-card_grid__item {
+  margin: auto;
+  background-color: transparent;
+  width: 700px;
+  height: 600px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card_grid__item:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color-dark);
+  box-shadow: 1px 1px 5px var(--text-color);
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 35%;
+  padding-bottom: 40%;
+}
+
+.flip-card-front h2 {
+  font-size: calc(var(--body-font-size) + 25px);
+}
+
+.flip-card-front p {
+  font-size: calc(var(--body-font-size) + 5px);
+}
+
+.flip-card-back {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-family);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color-dark);
+  box-shadow: 1px 1px 5px var(--text-color);
+  border-radius: 5px;
+  padding: 60px;
+  text-align: left;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+  font-size: calc(var(--body-font-size) + 15px);
+  margin-bottom: 20px;
+}
+
+.flip-card-back p {
+  font-size: calc(var(--body-font-size) + 5px);
+}
+
+/* Skills and tools card */
+
+.box_wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -15px;
+}
+
+.box_icon {
+  height: 70px;
+  width: 70px;
+  margin: 20px;
+  margin-bottom: 70px;
+}
+
+.box_icon p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Beginn projects page */
+
+/* Following code is styling the body on /projects */
+
+.main_portfolio {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.portfolio {
+  margin: auto;
+  width: 60%;
+  height: 84vh;
+}
+
+/* Following code is styling the grid on /projects */
+
+.project_list_grid {
+  color: var(--text-color);
+  font-size: var(--body-font-size);
+  font-family: var(--header-font-family);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid_item {
+  box-shadow: 1px 1px 10px var(--text-color);
+  border: 1px solid var(--accent-color-dark);
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px 15px;
+  grid-row: span 2;
+  grid-column: 1 / -1;
+}
+
+.grid_item h3 {
+  margin-bottom: 15px;
+}
+
+.gid_item p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid_item a {
+  font-size: var(--body-font-size);
+  font-family: var(--body-font-family);
+  display: inline;
+  line-height: 60px;
+}
+
+.project_list_grid_icons {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.project_icons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.devicon-html5-plain,
+.devicon-css3-plain,
+.devicon-javascript-plain,
+.devicon-vscode-plain,
+.devicon-sass-original,
+.devicon-git-plain,
+.devicon-github-original,
+.devicon-codepen-plain {
+  margin: 0;
+  padding: 0 5px;
+  height: 100%;
+  font-size: 30px;
+}
+
+/* Beginn contact page */
+
+/* Following code is styling the body on /contact */
+
+#contact {
+  width: 100%;
+  height: 100%;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+}
+
+/* Following code is styling the contact form */
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: var(--header-font-family);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 50px 40px;
+  position: relative;
+  max-width: 840px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color-dark);
+  box-shadow: 1px 1px 10px var(--text-color);
+}
+
+/* Begin left part of contact form */
+
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-family: var(--header-font-family);
+  font-weight: 400;
+}
+
+.form-control,
+textarea {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1.5px solid var(--text-color);
+  width: 400px;
+  margin-bottom: 5px;
+  padding-left: 7px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px var(--accent-color-dark);
+}
+
+.form-control {
+  line-height: 15px;
+}
+
+textarea {
+  padding-top: 3px;
+}
+
+.send-button {
+  background-color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
+  height: 37px;
+  width: 400px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.alt-send-button {
+  display: inline-block;
+  max-width: 50px;
+  height: 32px;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  color: var(--primary-color);
+  display: inline-block;
+  font-family: var(--header-font-family);
+  font-size: calc(var(--body-font-size) - 1px);
+  margin: auto;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -30px, 0px);
+  cursor: pointer;
+}
+
+.bi-send-fill {
+  font-size: 20px;
+}
+
+/* Begin right part of contact form */
+
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, phone, email section */
+
+.contact-list {
+  list-style-type: none;
+  width: 100% /* margin-left: -30px; */ padding-right 20px;
+  font-size: var(--body-font-size);
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px var(--header-font-family);
+  letter-spacing: 1.9px;
+  color: var(--text-color);
+}
+
+.place {
+  margin-left: 57px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 56px;
+}
+
+.bi {
+  color: var(--text-color);
+}
+
+.bi-send-fill {
+  color: var(--primary-color);
+}
+
+.contact-text a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: var(--accent-color-light);
+  text-decoration: none;
+}
+
+/* Social media icons */
+
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: var(--accent-color-light);
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 12px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: var(--accent-color-light);
+  cursor: pointer;
+}
+
+hr {
+  border-color: var(--accent-color-dark);
+}
+
+/* Text underneath contact form */
+
+.contact-me-text {
+  font-family: var(--header-font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+/* Beginn footer */
+
+/* Following code is styling the footer */
+
+.footer-text {
+  background-color: var(--primary-color);
+  position: sticky;
+  width: 100%;
+  height: 8vh;
+  bottom: 0;
+}
+
+.footer-text p {
+  font-family: var(--header-font-family);
+  font-size: calc(var(--body-font-size) - 3px);
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 8vh;
+}
+
+/* Begin media queries */
+
+/* Begin media queries navbar */
+
+/* Following code is about navbar for screen width of less than 1201px */
+
+@media screen and (max-width: 1200px) {
+  .nav-links {
+    width: 45%;
+  }
+}
+
+/* Following code is about navbar for screen width of less than 1025px */
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+
+/* Following code is about navbar for screen width of less than 769px */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    background-color: var(--primary-color);
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .button_navbar {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .button_two {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Begin media queries /home */
+
+/* Following code takes care of the buttons in the intro section on /home for screen width of less than 1401px */
+
+@media screen and (max-width: 1400px) {
+  .main_home {
+    max-width: 650px;
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 11vh;
+  }
+
+  .profile_text_big {
+    font-size: calc(var(--body-font-size) + 38px);
+  }
+
+  .profile_text_small {
+    font-size: calc(var(--body-font-size) + 8px);
+  }
+
+  .button_one {
+    display: none;
+  }
+
+  .button_two {
+    font-size: calc(var(--body-font-size) + 9px);
+    margin-left: 0;
+  }
+
+  .button_three {
+    font-size: calc(var(--body-font-size) + 9px);
+    display: inline-block;
+    margin-right: 180px;
+    margin-bottom: 30px;
+  }
+
+  .button_text_small {
+    font-size: calc(var(--body-font-size) - 2px);
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+/* Following code takes care of the buttons in the intro section on /home for screen width of less than 1201px */
+
+@media screen and (max-width: 1200px) {
+  .main_home {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 13vh;
+  }
+
+  .profile_text_big {
+    font-size: calc(var(--body-font-size) + 35px);
+  }
+
+  .profile_text_small {
+    font-size: calc(var(--body-font-size) + 6px);
+  }
+
+  .button_one {
+    display: none;
+  }
+
+  .button_two {
+    font-size: calc(var(--body-font-size) + 8px);
+    margin-top: 15px;
+  }
+
+  .button_three {
+    font-size: calc(var(--body-font-size) + 8px);
+  }
+}
+
+/* Following code takes care of the buttons in the intro section on /home for screen width of less than 901px */
+
+@media screen and (max-width: 900px) {
+  .main_home {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 11vh;
+  }
+
+  .profile_text_big {
+    font-size: calc(var(--body-font-size) + 30px);
+  }
+
+  .profile_text_small {
+    font-size: calc(var(--body-font-size) + 4px);
+  }
+
+  .button_one {
+    display: none;
+  }
+
+  .button_two {
+    font-size: calc(var(--body-font-size) + 7px);
+  }
+
+  .button_three {
+    font-size: calc(var(--body-font-size) + 7px);
+    display: inline-block;
+    margin-right: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Following code takes care of the buttons in the intro section on /home for screen width of less than 769px */
+
+@media screen and (max-width: 768px) {
+  .main_home {
+    max-width: 450px;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .profile_text_big {
+    font-size: calc(var(--body-font-size) + 25px);
+  }
+
+  .profile_text_small {
+    font-size: calc(var(--body-font-size) + 2px);
+  }
+
+  .button_one {
+    display: none;
+  }
+
+  .button_two {
+    font-size: calc(var(--body-font-size) + 6px);
+    margin-top: 15px;
+  }
+
+  .button_three {
+    font-size: calc(var(--body-font-size) + 6px);
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Begin media queries /about me */
+
+/* Begin media queries grid items */
+
+/* Following code is styling the grid for screen width of less than 1441px */
+
+@media all and (max-width: 1440px) {
+  .grid_container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .flip-card_grid__item {
+    margin: auto;
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card_grid__item:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    font-family: var(--body-font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 35%;
+    padding-bottom: 40%;
+  }
+
+  .flip-card-front h2 {
+    font-size: calc(var(--body-font-size) + 15px);
+  }
+
+  .flip-card-front p {
+    font-size: calc(var(--body-font-size) + 3px);
+  }
+
+  .flip-card-back {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: left;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back h3 {
+    font-size: calc(var(--body-font-size) + 10px);
+    margin-bottom: 20px;
+  }
+
+  .flip-card-back p {
+    font-size: calc(var(--body-font-size) + 3px);
+  }
+
+  /* Skills and tools card */
+
+  .box_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 0 15px 15px;
+  }
+
+  .box_icon {
+    height: 45px;
+    width: 45px;
+    margin: 15px;
+    margin-bottom: 60px;
+  }
+
+  .box_icon p {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    text-align: center;
+  }
+}
+
+/* Following code is styling the grid for screen width of less than 1025px */
+
+@media all and (max-width: 1024px) {
+  .grid_container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 30px;
+    width: 75%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .flip-card_grid__item {
+    margin: auto;
+    background-color: transparent;
+    width: 450px;
+    height: 450px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card_grid__item:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    font-family: var(--body-font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 40%;
+    padding-bottom: 35%;
+  }
+
+  .flip-card-front h2 {
+    font-size: calc(var(--body-font-size) + 12px);
+  }
+
+  .flip-card-front p {
+    font-size: calc(var(--body-font-size) + 1px);
+  }
+
+  .flip-card-back {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: left;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back h3 {
+    font-size: calc(var(--body-font-size) + 7px);
+    margin-bottom: 20px;
+  }
+
+  .flip-card-back p {
+    font-size: calc(var(--body-font-size) + 1px);
+  }
+
+  /* Skills and tools card */
+
+  .box_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+  }
+
+  .box_icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .box_icon p {
+    font-family: var(--body-font-family);
+    font-size: calc(var(--body-font-size) - 3px);
+    text-align: center;
+  }
+}
+
+/* Following code is styling the grid for screen width of less than 901px */
+
+@media all and (max-width: 900px) {
+  .grid_container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    width: 75%;
+    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+  }
+
+  .flip-card_grid__item {
+    margin: auto;
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card_grid__item:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    font-family: var(--body-font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px 10px 10px 10px;
+  }
+
+  .flip-card-front h2 {
+    font-size: calc(var(--body-font-size) + 5px);
+    margin-top: 15px;
+  }
+
+  .flip-card-front p {
+    font-size: calc(var(--body-font-size) + 2px);
+  }
+
+  .flip-card-back {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: left;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back h3 {
+    font-size: calc(var(--body-font-size) + 1px);
+    margin-bottom: 10px;
+  }
+
+  .flip-card-back p {
+    font-size: calc(var(--body-font-size) - 5px);
+  }
+
+  /* Skills and tools card */
+
+  .box_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: -20px;
+  }
+
+  .box_icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 30px;
+    margin-bottom: 45px;
+  }
+
+  .box_icon p {
+    font-family: var(--body-font-family);
+    font-size: calc(var(--body-font-size) - 5px);
+    text-align: center;
+  }
+}
+
+/* Following code is styling the grid for screen width of less than 551px */
+
+@media all and (max-width: 550px) {
+  .grid_container {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+    width: 75%;
+    height: 82vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .flip-card_grid__item {
+    margin: auto;
+    background-color: transparent;
+    width: 400px;
+    height: 200px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card_grid__item:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    font-family: var(--body-font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px 10px 10px 10px;
+  }
+
+  .flip-card-front h2 {
+    font-size: calc(var(--body-font-size) + 3px);
+    margin-top: 15px;
+  }
+
+  .flip-card-front p {
+    font-size: var(--body-font-size);
+  }
+
+  .flip-card-back {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 5px;
+    padding: 30px;
+    text-align: left;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back h3 {
+    font-size: var(--body-font-size);
+    margin-bottom: 3px;
+  }
+
+  .flip-card-back p {
+    font-size: calc(var(--body-font-size) - 6px);
+  }
+
+  /* Skills and tools card */
+
+  .box_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: -25px;
+  }
+
+  .box_icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 22px;
+    margin-bottom: 30px;
+  }
+
+  .box_icon p {
+    font-family: var(--body-font-family);
+    font-size: calc(var(--body-font-size) - 5px);
+    text-align: center;
+  }
+}
+
+/* Begin media queries /portfolio */
+
+/* Begin media queries project grid content */
+
+/* Following code is about the grid content for screen width of less than 1441px */
+
+@media screen and (max-width: 1440px) {
+  .project_list_grid {
+    color: var(--text-color);
+    font-size: var(--body-font-size);
+    font-family: var(--header-font-family);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-top: 30px;
+  }
+
+  .grid_item {
+    box-shadow: 1px 1px 10px var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px 15px;
+    grid-row: span 2;
+    grid-column: 1 / -1;
+  }
+
+  .grid_item h3 {
+    margin-bottom: 10px;
+  }
+
+  .grid_item p {
+    font-size: var(--body-font-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .grid_item a {
+    font-size: calc(var(--body-font-size) - 3px);
+  }
+
+  .grid_item button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: var(--body-font-size);
+    font-family: var(--body-font-family);
+  }
+
+  .project_icons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .devicon-html5-plain,
+  .devicon-css3-plain,
+  .devicon-javascript-plain,
+  .devicon-vscode-plain,
+  .devicon-sass-original,
+  .devicon-git-plain,
+  .devicon-github-original,
+  .devicon-codepen-plain {
+    margin: 0;
+    padding: 0 5px;
+    height: 100%;
+    font-size: 25px;
+  }
+}
+
+/* Following code is about the grid content for screen width of less than 769px */
+
+@media screen and (max-width: 768px) {
+  .project_list_grid {
+    color: var(--text-color);
+    font-size: var(--body-font-size);
+    font-family: var(--header-font-family);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 30px;
+  }
+
+  .grid_item {
+    box-shadow: 1px 1px 10px var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px 15px;
+    grid-row: span 2;
+    grid-column: 1 / -1;
+  }
+
+  .grid_item h3 {
+    margin-bottom: 10px;
+  }
+
+  .grid_item p {
+    display: none;
+  }
+
+  .grid_item button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: var(--body-font-size);
+    font-family: var(--body-font-family);
+  }
+
+  .project_icons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+
+  .devicon-html5-plain,
+  .devicon-css3-plain,
+  .devicon-javascript-plain,
+  .devicon-vscode-plain,
+  .devicon-sass-original,
+  .devicon-git-plain,
+  .devicon-github-original,
+  .devicon-codepen-plain {
+    margin: 0;
+    padding: 0 5px;
+    height: 100%;
+    font-size: 18px;
+  }
+}
+
+/* Begin media queries /contact */
+
+/* Begin media queries contact form */
+
+/* Following code is about the contact form for screen width of less than 1201px */
+
+@media screen and (max-width: 1200px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+  }
+
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .place,
+  .phone,
+  .gmail {
+    font-size: var(--body-font-size);
+  }
+
+  .place {
+    margin-left: 39px;
+  }
+
+  .phone {
+    margin-left: 37px;
+  }
+
+  .gmail {
+    margin-left: 36px;
+  }
+
+  .direct-contact-container {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  .contact-list {
+    padding-left: 10px;
+    padding-right: 1px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  #contact {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
+/* Following code is about the contact form for screen width of less than 769px */
+
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+  }
+
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .form-control,
+  textarea {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 8px;
+  }
+
+  .send-button {
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .alt-send-button {
+    margin-left: auto;
+  }
+
+  .place,
+  .phone,
+  .gmail {
+    font-size: var(--body-font-size);
+  }
+
+  .place {
+    margin-left: 39px;
+  }
+
+  .phone {
+    margin-left: 37px;
+  }
+
+  .gmail {
+    margin-left: 36px;
+  }
+
+  .direct-contact-container {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  .contact-list {
+    padding-left: 10px;
+    padding-right: 1px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  #contact {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
+/* Begin keyframes */
+
+/* Begin keyframes intro text animation on /home */
+
+/* Following code is animating the adjective in the intro text on /home */
+
+/* @keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+} */
