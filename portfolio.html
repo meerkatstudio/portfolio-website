@@ -1,111 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8" lang="en" content="width=device-width, initial-scale1">
-  <title>Meerkat Studio - Portfolio</title>
-  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meerkat Studio - PROJECTS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <!-- Google Font Link (3below) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Vollkorn+SC:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/style.production.css">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
-
-  <header>
-    <a href="index.html">
-      <img src="./img/personal_logo_icon.svg" alt="Personal logo of Patrick Lemmer" class="logo">
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav>
-      <ul class="topbottombordersout">
-        <li>
-          <a href="index.html">HOME</a>
-        </li>
-        <li>
-          <a href="about.html">ABOUT ME</a>
-        </li>
-        <li>
-          <a href="portfolio.html">PORTFOLIO</a>
-        </li>
-        <li>
-          <a href="contact.html">CONTACT</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="social-media">
-      <a href="https://github.com/meerkatstudio" class="social-github" target="_blank"><img src="img/github_icon_bw.svg" alt="Github icon"></a>
-      <a href="https://twitter.com/meerkatstudio_" class="social-twitter" target="_blank"><img src="img/twitter_icon_color.svg" alt="Twitter icon"></a>
-      <a href="https://www.linkedin.com/in/patricklemmer/" class="social-linkedin" target="_blank"><img src="img/linkedin_icon_color.svg" alt="LinkedIn icon"></a>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><h3>Meerkat Studio</h3></a>
     </div>
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-    </label>
-  </header>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="about.html">About me</a>
+      </li>
+      <li>
+        <a href="portfolio.html">Portfolio</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+    <div>
+      <a href="contact.html" class="button_navbar">Get in touch</a>
+    </div>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
 
-  <!-- Main content -->
-  <section>
-    <h1 class="portfolio-header">Portfolio</h1>
-    <div class="project-list-grid">
-      <!-- Grid items will live here -->
-      <div class="grid__item">
-        <h2>Mobile web app</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="#"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">See project on GitHub</button></a>
-      </div>
-      <div class="grid__item">
-        <h2>Personal website</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="https://www.patricklemmer.com"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">patricklemmer.com</button></a>
-      </div>
-      <div class="grid__item">
-        <h2>Freelance Project</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="#"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">See project here</button></a>
-      </div>
-      <div class="grid__item">
-        <h2>Freelance Project 2</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="#"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">See project here</button></a>
-      </div>
-      <div class="grid__item">
-        <h2>Freelance Project 3</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="#"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">See project here</button></a>
-      </div>
-      <div class="grid__item">
-        <h2>Another mobile web app</h2>
-        <p>
-          Within this project, I was able responsible for the frontend. It´s written in React.js Additionally, I´ve created the HTML and CSS templates
-        </p>
-        <a href="#"><button class="button_tertiary" type="button" name="button_tertiary" target="_blank">See project on GitHub</button></a>
+  </nav>
+
+  <main class="main_portfolio">
+
+    <div class="portfolio">
+      <div class="project_list_grid">
+        <div class="grid_item">
+          <h3>Portfolio Website</h3>
+          <p>
+            My first project is this website itself. I created this website during my first section of the Full-Stack Development program at CareerFoundry.
+            The Website was build using HTML, CSS and JavaScript.
+          </p>
+          <div class="project_list_grid_icons">
+            <div class="project_icons">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-vscode-plain"></i>
+              <i class="devicon-sass-original"></i>
+              <i class="devicon-git-plain"></i>
+              <i class="devicon-github-original"></i>
+              <i class="devicon-codepen-plain"></i>
+            </div>
+          </div>
+          <a href="index.html" class="button_one" target="_blank">Check out my full website</a>
+        </div>
+        <div class="grid_item">
+          <h3>Time based image animation</h3>
+          <p>
+            While the meerkat on my home page roams the plains of the African savannah trying to feed it's family, you can follow it throughout the different 
+            times of the day from the comfort of your laptop, tablet or smartphone. I built this simple animation using HTML, CSS and JavaScript.
+          </p>
+          <div class="project_list_grid_icons">
+            <div class="project_icons">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-vscode-plain"></i>
+            </div>
+          </div>
+          <a href="https://codepen.io/mrbabastone/pen/xxPmMMa" class="button_one" target="_blank">Animation CodePen</a>
+        </div>
+        <div class="grid_item">
+          <h3>Personal website</h3>
+          <p>
+            Long before I embarked on the journey to follow a new career path into tech, I have created my own personal website to showcase my wildlife images. 
+            I have created this website using Squarespace and in order to make this website even more "me" I have started teaching myself some HTML and CSS to change
+            certain aspects of it. That was my first glimpse into the world of web development.
+          </p>
+          <div class="project_list_grid_icons">
+            <div class="project_icons">
+              <i class="devicon-html5-plain"></i>
+              <i class="devicon-css3-plain"></i>
+            </div>
+          </div>
+          <a href="https://www.patricklemmer.com/" class="button_one" target="_blank">Visit patricklemmer.com</a>
+        </div>
+        <div class="grid_item">
+          <h3>My next project - watch this space!</h3>
+          <p>
+            I will soon start building a website for my wife's health coaching business. Why don't you go and give her a follow and say hi to her already on Instagram.
+          </p>
+          <a href="https://www.instagram.com/agrainofkind/" class="button_one" target="_blank">Click here to say hi</a>
+        </div>
+        <div class="grid_item">
+          <h3>This could be your new website</h3>
+          <p>
+            I am currently immersed full-time into learning new skills and tools to create web based applications and websites. Even though I am still 
+            learning I am already creating real world projects - like this portfolio website. Each day I am getting more and more comfortable with this environment.
+            Get in touch, if you are looking for your own space online, or if you are willing to help me breaking into the world of web development further.
+          </p>
+          <a href="contact.html" class="button_one">I'm in!</a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <footer class="page-footer">
-    <p>Find me on</p>
-    <div class="social-media">
-      <a href="https://github.com/meerkatstudio" target="_blank"><img src="img/github_icon_bw.svg" alt="Github icon"></a>
-      <a href="https://twitter.com/meerkatstudio_" target="_blank"><img src="img/twitter_icon_color.svg" alt="Twitter icon"></a>
-      <a href="https://www.linkedin.com/in/patricklemmer/" target="_blank"><img src="img/linkedin_icon_color.svg" alt="LinkedIn icon"></a>
+  </main>
+
+  <footer>
+
+    <div class="footer-text">
+      <p>Designed and build by Patrick Lemmer</p>
     </div>
+
   </footer>
 
-  <script type="text/javascript" src="js/tota11y.min.js"></script>
+  <script src="./js/app.js"></script>
 
 </body>
 
