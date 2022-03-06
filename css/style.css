@@ -95,12 +95,15 @@ nav {
 }
 
 .logo a {
-  color: var(--text-color);
   text-decoration: none;
 }
 
 .logo a:active,
 .logo a:visited {
+  color: var(--text-color);
+}
+
+.logo h3 {
   color: var(--text-color);
 }
 
