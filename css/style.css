@@ -369,6 +369,7 @@ nav {
   background-color: transparent;
   width: 700px;
   height: 600px;
+  border-radius: 20px;
   perspective: 1000px;
 }
 
@@ -1028,6 +1029,7 @@ hr {
     width: 500px;
     height: 500px;
     perspective: 1000px;
+    border-radius: 20px;
   }
 
   .flip-card-inner {
@@ -1137,6 +1139,7 @@ hr {
     width: 450px;
     height: 450px;
     perspective: 1000px;
+    border-radius: 20px;
   }
 
   .flip-card-inner {
@@ -1244,6 +1247,7 @@ hr {
     width: 500px;
     height: 200px;
     perspective: 1000px;
+    border-radius: 20px;
   }
 
   .flip-card-inner {
@@ -1356,6 +1360,7 @@ hr {
     width: 400px;
     height: 200px;
     perspective: 1000px;
+    border-radius: 20px;
   }
 
   .flip-card-inner {
