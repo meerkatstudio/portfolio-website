@@ -636,6 +636,9 @@ textarea {
   font-size: calc(var(--body-font-size) - 1px);
   margin: auto;
   letter-spacing: 2px;
+  position: absolute;
+  bottom: -23px;
+  left: -5px;
 }
 
 .alt-send-button:hover {
@@ -644,6 +647,7 @@ textarea {
 }
 
 .bi-send-fill {
+  position:relative;
   font-size: 20px;
 }
 
