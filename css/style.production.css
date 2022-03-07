@@ -30,6 +30,24 @@
 
 /* Following code sets variables for this document */
 
+:root {
+  --text-color: #111;
+  --primary-color: #fcbf49;
+  --accent-color-light: #fff;
+  --accent-color-dark: #525252;
+  --body-font-family: 'JetBrains Mono', monospace;
+  --header-font-family: 'Staatliches', serif;
+  --button-font-family: 'Staatliches', serif;
+  --body-font-size: 1rem;
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 18.72px;
+  --h4-font-size: 1rem;
+  --h5-font-size: 14px;
+  --h6-font-size: 12px;
+  --line-height: 22.5px;
+}
+
 /* Begin of global code */
 
 /* General code */
@@ -52,9 +70,9 @@ body > footer {
 }
 
 body {
-  background-color: #fcbf49;
-  color: #111;
-  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
 }
 
 a {
@@ -68,8 +86,8 @@ a {
 /* Following code is styling the navbar for screen width of more than 1200px (Media queries for navbar on other screen sizes below) */
 
 nav {
-  background-color: #fcbf49;
-  font-family: 'Staatliches', serif;
+  background-color: var(--primary-color);
+  font-family: var(--header-font-family);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,7 +101,7 @@ nav {
 }
 
 .logo {
-  color: #111;
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -93,16 +111,13 @@ nav {
   text-decoration: none;
 }
 
-.logo a:active {
-  color: #111;
-}
-
+.logo a:active,
 .logo a:visited {
-  color: #111;
+  color: var(--text-color);
 }
 
 .logo h3 {
-  color: #111;
+  color: var(--text-color);
 }
 
 .nav-links {
@@ -119,7 +134,7 @@ nav {
 }
 
 .nav-links a {
-  color: #111;
+  color: var(--text-color);
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -127,23 +142,23 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: var(--accent-color-light);
 }
 
 .button_navbar {
-  background-color: #fcbf49;
-  font-size: 1rem;
-  color: #111;
+  background-color: var(--primary-color);
+  font-size: var(--body-font-size);
+  color: var(--text-color);
   border-radius: 50px;
   padding: 7px 20px;
-  border: 1px solid #525252;
+  border: 1px solid var(--accent-color-dark);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .button_navbar:hover {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--text-color);
+  color: var(--accent-color-light);
 }
 
 .burger {
@@ -151,7 +166,7 @@ nav {
 }
 
 .burger div {
-  background-color: #111;
+  background-color: var(--text-color);
   width: 25px;
   height: 3px;
   margin: 5px;
@@ -207,7 +222,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'Staatliches', serif;
+  font-family: var(--header-font-family);
   margin: auto;
   padding: 30px;
   -webkit-box-flex: 2;
@@ -216,66 +231,34 @@ nav {
 }
 
 .profile_text_big {
-  font-size: calc(1rem + 40px);
+  font-size: calc(var(--body-font-size) + 40px);
 }
 
 .profile_text_small {
-  font-size: calc(1rem + 10px);
+  font-size: calc(var(--body-font-size) + 10px);
   margin: 30px 0px 15px 0px;
 }
 
-.button_one {
-  background-color: #fcbf49;
-  color: #111;
-  font-family: 'Staatliches', serif;
-  font-size: calc(1rem + 10px);
-  border-radius: 3px;
-  margin: auto;
-  padding: 7px 40px;
-  border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
-}
-
-.button_two {
-  background-color: #fcbf49;
-  color: #111;
-  font-family: 'Staatliches', serif;
-  font-size: calc(1rem + 10px);
-  border-radius: 3px;
-  margin: auto;
-  padding: 7px 40px;
-  border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
-}
-
+.button_one,
+.button_two,
 .button_three {
-  background-color: #fcbf49;
-  color: #111;
-  font-family: 'Staatliches', serif;
-  font-size: calc(1rem + 10px);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: var(--header-font-family);
+  font-size: calc(var(--body-font-size) + 10px);
   border-radius: 3px;
   margin: auto;
   padding: 7px 40px;
-  border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
+  border: 0.5px solid var(--accent-color-dark);
+  -webkit-box-shadow: 4px 4px 5px var(--text-color);
+          box-shadow: 4px 4px 5px var(--text-color);
 }
 
-.button_one:hover {
-  background-color: #fff;
-  color: #111;
-}
-
-.button_two:hover {
-  background-color: #fff;
-  color: #111;
-}
-
+.button_one:hover,
+.button_two:hover,
 .button_three:hover {
-  background-color: #fff;
-  color: #111;
+  background-color: var(--accent-color-light);
+  color: var(--text-color);
 }
 
 .button_two {
@@ -299,9 +282,9 @@ nav {
 }
 
 .arrow_text {
-  font-size: calc(1rem - 1px);
-  font-family: 'Staatliches', serif;
-  color: #111;
+  font-size: calc(var(--body-font-size) - 1px);
+  font-family: var(--header-font-family);
+  color: var(--text-color);
   margin-bottom: 5px;
   margin-left: 20px;
 }
@@ -313,8 +296,8 @@ nav {
 #white-underline {
   /* Underlining of adjective in intro text on /home */
   text-decoration: underline;
-  -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  -webkit-text-decoration-color: var(--accent-color-light);
+          text-decoration-color: var(--accent-color-light);
 }
 
 /* Following code is animating the adjective in the intro text on /home; temporarily disabled */
@@ -485,32 +468,32 @@ nav {
 }
 
 .flip-card-front {
-  font-family: 'JetBrains Mono', monospace;
-  color: #111;
-  background-color: #fcbf49;
-  border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 5px #111;
-          box-shadow: 1px 1px 5px #111;
-  border-radius: 5px;
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color-dark);
+  -webkit-box-shadow: 1px 1px 5px var(--text-color);
+          box-shadow: 1px 1px 5px var(--text-color);
+  border-radius: 20px;
   text-align: center;
   padding: 35% 20% 40% 20%;
 }
 
 .flip-card-front h2 {
-  font-family: 'Staatliches', serif;
+  font-family: var(--header-font-family);
 }
 
 .flip-card-front p {
-  font-size: calc(1rem + 5px);
+  font-size: calc(var(--body-font-size) + 5px);
 }
 
 .flip-card-back {
-  background-color: #fcbf49;
-  color: #111;
-  border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 5px #111;
-          box-shadow: 1px 1px 5px #111;
-  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color-dark);
+  -webkit-box-shadow: 1px 1px 5px var(--text-color);
+          box-shadow: 1px 1px 5px var(--text-color);
+  border-radius: 20px;
   padding: 60px;
   text-align: left;
   -webkit-transform: rotateY(180deg);
@@ -518,13 +501,13 @@ nav {
 }
 
 .flip-card-back h3 {
-  font-size: 18.72px;
-  font-family: 'Staatliches', serif;
+  font-size: var(--h3-font-size);
+  font-family: var(--header-font-family);
   margin-bottom: 20px;
 }
 
 .flip-card-back p {
-  font-size: calc(1rem + 5px);
+  font-size: calc(var(--body-font-size) + 5px);
 }
 
 /* Skills and tools card */
@@ -548,8 +531,8 @@ nav {
 }
 
 .box_icon p {
-  font-family: 'Staatliches', serif;
-  font-size: 1rem;
+  font-family: var(--header-font-family);
+  font-size: var(--body-font-size);
   margin-top: 15px;
   text-align: center;
 }
@@ -573,17 +556,17 @@ nav {
 /* Following code is styling the grid on /projects */
 
 .project_list_grid {
-  color: #111;
+  color: var(--text-color);
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .grid_item {
-  -webkit-box-shadow: 1px 1px 10px #111;
-          box-shadow: 1px 1px 10px #111;
-  border: 1px solid #525252;
-  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px var(--text-color);
+          box-shadow: 1px 1px 10px var(--text-color);
+  border: 1px solid var(--accent-color-dark);
+  border-radius: 20px;
   margin: 30px;
   padding: 20px 15px;
   -ms-grid-row-span: 2;
@@ -592,20 +575,20 @@ nav {
 }
 
 .grid_item h3 {
-  font-family: 'Staatliches', serif;
+  font-family: var(--header-font-family);
   margin-bottom: 15px;
 }
 
 .gid_item p {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--body-font-family);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .grid_item a {
-  font-size: 1rem;
-  font-family: 'Staatliches', serif;
+  font-size: var(--body-font-size);
+  font-family: var(--header-font-family);
   display: inline;
   line-height: 60px;
 }
@@ -665,8 +648,8 @@ nav {
   text-align: center;
   margin: 0 auto;
   padding: 40px 0;
-  font-family: 'Staatliches', serif;
-  color: #111;
+  font-family: var(--header-font-family);
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 6px;
 }
@@ -686,10 +669,10 @@ nav {
   padding: 50px 40px;
   position: relative;
   max-width: 840px;
-  border-radius: 10px;
-  border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 10px #111;
-          box-shadow: 1px 1px 10px #111;
+  border-radius: 20px;
+  border: 1px solid var(--accent-color-dark);
+  -webkit-box-shadow: 1px 1px 10px var(--text-color);
+          box-shadow: 1px 1px 10px var(--text-color);
 }
 
 /* Begin left part of contact form */
@@ -697,34 +680,22 @@ nav {
 .form-horizontal {
   float: left;
   max-width: 400px;
-  font-family: 'Staatliches', serif;
+  font-family: var(--header-font-family);
   font-weight: 400;
 }
 
-.form-control {
-  background-color: #fcbf49;
-  color: #111;
-  border: 1.5px solid #111;
-  width: 400px;
-  margin-bottom: 5px;
-  padding-left: 7px;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 5px #525252;
-          box-shadow: 1px 1px 5px #525252;
-}
-
+.form-control,
 textarea {
-  background-color: #fcbf49;
-  color: #111;
-  border: 1.5px solid #111;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1.5px solid var(--text-color);
   width: 400px;
   margin-bottom: 5px;
   padding-left: 7px;
   letter-spacing: 1px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 5px #525252;
-          box-shadow: 1px 1px 5px #525252;
+  -webkit-box-shadow: 1px 1px 5px var(--accent-color-dark);
+          box-shadow: 1px 1px 5px var(--accent-color-dark);
 }
 
 .form-control {
@@ -736,7 +707,7 @@ textarea {
 }
 
 .send-button {
-  background-color: #111;
+  background-color: var(--text-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,10 +741,10 @@ textarea {
 }
 
 .send-text {
-  color: #fcbf49;
+  color: var(--primary-color);
   display: inline-block;
-  font-family: 'Staatliches', serif;
-  font-size: calc(1rem - 1px);
+  font-family: var(--header-font-family);
+  font-size: calc(var(--body-font-size) - 1px);
   margin: auto;
   letter-spacing: 2px;
   position: absolute;
@@ -803,7 +774,7 @@ textarea {
 .contact-list {
   list-style-type: none;
   width: 100% /* margin-left: -30px; */ padding-right 20px;
-  font-size: 1rem;
+  font-size: var(--body-font-size);
 }
 
 .list-item {
@@ -812,9 +783,9 @@ textarea {
 }
 
 .contact-text {
-  font: 300 18px 'Staatliches', serif;
+  font: 300 18px var(--header-font-family);
   letter-spacing: 1.9px;
-  color: #111;
+  color: var(--text-color);
 }
 
 .place {
@@ -830,22 +801,22 @@ textarea {
 }
 
 .bi {
-  color: #111;
+  color: var(--text-color);
 }
 
 .bi-send-fill {
-  color: #fcbf49;
+  color: var(--primary-color);
 }
 
 .contact-text a {
-  color: #111;
+  color: var(--text-color);
   text-decoration: none;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
 
 .contact-text a:hover {
-  color: #fff;
+  color: var(--accent-color-light);
   text-decoration: none;
 }
 
@@ -861,7 +832,7 @@ textarea {
 }
 
 .social-media-list li a {
-  color: #fff;
+  color: var(--accent-color-light);
 }
 
 .social-media-list li {
@@ -872,18 +843,18 @@ textarea {
   margin: 12px 3px;
   line-height: 60px;
   border-radius: 50%;
-  color: #fff;
+  color: var(--accent-color-light);
   cursor: pointer;
 }
 
 hr {
-  border-color: #525252;
+  border-color: var(--accent-color-dark);
 }
 
 /* Text underneath contact form */
 
 .contact-me-text {
-  font-family: 'Staatliches', serif;
+  font-family: var(--header-font-family);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -906,7 +877,7 @@ hr {
 /* Following code is styling the footer */
 
 .footer-text {
-  background-color: #fcbf49;
+  background-color: var(--primary-color);
   position: sticky;
   width: 100%;
   height: 8vh;
@@ -914,9 +885,9 @@ hr {
 }
 
 .footer-text p {
-  font-family: 'Staatliches', serif;
-  font-size: calc(1rem - 3px);
-  color: #111;
+  font-family: var(--header-font-family);
+  font-size: calc(var(--body-font-size) - 3px);
+  color: var(--text-color);
   text-transform: uppercase;
   text-align: center;
   line-height: 8vh;
@@ -950,7 +921,7 @@ hr {
   }
 
   .nav-links {
-    background-color: #fcbf49;
+    background-color: var(--primary-color);
     position: absolute;
     right: 0;
     height: 92vh;
@@ -1053,11 +1024,11 @@ hr {
   }
 
   .profile_text_big {
-    font-size: calc(1rem + 38px);
+    font-size: calc(var(--body-font-size) + 38px);
   }
 
   .profile_text_small {
-    font-size: calc(1rem + 8px);
+    font-size: calc(var(--body-font-size) + 8px);
   }
 
   .button_one {
@@ -1065,19 +1036,19 @@ hr {
   }
 
   .button_two {
-    font-size: calc(1rem + 9px);
+    font-size: calc(var(--body-font-size) + 9px);
     margin-left: 0;
   }
 
   .button_three {
-    font-size: calc(1rem + 9px);
+    font-size: calc(var(--body-font-size) + 9px);
     display: inline-block;
     margin-right: 180px;
     margin-bottom: 30px;
   }
 
   .button_text_small {
-    font-size: calc(1rem - 2px);
+    font-size: calc(var(--body-font-size) - 2px);
   }
 
   .arrow {
@@ -1096,11 +1067,11 @@ hr {
   }
 
   .profile_text_big {
-    font-size: calc(1rem + 35px);
+    font-size: calc(var(--body-font-size) + 35px);
   }
 
   .profile_text_small {
-    font-size: calc(1rem + 6px);
+    font-size: calc(var(--body-font-size) + 6px);
   }
 
   .button_one {
@@ -1108,12 +1079,12 @@ hr {
   }
 
   .button_two {
-    font-size: calc(1rem + 8px);
+    font-size: calc(var(--body-font-size) + 8px);
     margin-top: 15px;
   }
 
   .button_three {
-    font-size: calc(1rem + 8px);
+    font-size: calc(var(--body-font-size) + 8px);
   }
 }
 
@@ -1128,11 +1099,11 @@ hr {
   }
 
   .profile_text_big {
-    font-size: calc(1rem + 30px);
+    font-size: calc(var(--body-font-size) + 30px);
   }
 
   .profile_text_small {
-    font-size: calc(1rem + 4px);
+    font-size: calc(var(--body-font-size) + 4px);
   }
 
   .button_one {
@@ -1140,11 +1111,11 @@ hr {
   }
 
   .button_two {
-    font-size: calc(1rem + 7px);
+    font-size: calc(var(--body-font-size) + 7px);
   }
 
   .button_three {
-    font-size: calc(1rem + 7px);
+    font-size: calc(var(--body-font-size) + 7px);
     display: inline-block;
     margin-right: 100px;
     margin-bottom: 30px;
@@ -1162,11 +1133,11 @@ hr {
   }
 
   .profile_text_big {
-    font-size: calc(1rem + 25px);
+    font-size: calc(var(--body-font-size) + 25px);
   }
 
   .profile_text_small {
-    font-size: calc(1rem + 2px);
+    font-size: calc(var(--body-font-size) + 2px);
   }
 
   .button_one {
@@ -1174,12 +1145,12 @@ hr {
   }
 
   .button_two {
-    font-size: calc(1rem + 6px);
+    font-size: calc(var(--body-font-size) + 6px);
     margin-top: 15px;
   }
 
   .button_three {
-    font-size: calc(1rem + 6px);
+    font-size: calc(var(--body-font-size) + 6px);
     display: inline-block;
     margin-right: 40px;
     margin-bottom: 30px;
@@ -1266,33 +1237,33 @@ hr {
   }
 
   .flip-card-front {
-    color: #111;
-    background-color: #fcbf49;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     text-align: center;
     padding-top: 35%;
     padding-bottom: 40%;
   }
 
   .flip-card-front h2 {
-    font-size: calc(1rem + 15px);
-    font-family: 'Staatliches', serif;
+    font-size: calc(var(--body-font-size) + 15px);
+    font-family: var(--header-font-family);
   }
 
   .flip-card-front p {
-    font-size: calc(1rem + 3px);
+    font-size: calc(var(--body-font-size) + 3px);
   }
 
   .flip-card-back {
-    background-color: #fcbf49;
-    color: #111;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     padding: 30px;
     text-align: left;
     -webkit-transform: rotateY(180deg);
@@ -1300,14 +1271,14 @@ hr {
   }
 
   .flip-card-back h3 {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem + 10px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) + 10px);
     margin-bottom: 20px;
   }
 
   .flip-card-back p {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: calc(1rem + 3px);
+    font-family: var(--body-font-family);
+    font-size: calc(var(--body-font-size) + 3px);
   }
 
   /* Skills and tools card */
@@ -1331,8 +1302,8 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'Staatliches', serif;
-    font-size: 1rem;
+    font-family: var(--header-font-family);
+    font-size: var(--body-font-size);
     text-align: center;
   }
 }
@@ -1413,33 +1384,33 @@ hr {
   }
 
   .flip-card-front {
-    color: #111;
-    background-color: #fcbf49;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     text-align: center;
     padding-top: 40%;
     padding-bottom: 35%;
   }
 
   .flip-card-front h2 {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem + 12px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) + 12px);
   }
 
   .flip-card-front p {
-    font-size: calc(1rem + 1px);
+    font-size: calc(var(--body-font-size) + 1px);
   }
 
   .flip-card-back {
-    background-color: #fcbf49;
-    color: #111;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     padding: 30px;
     text-align: left;
     -webkit-transform: rotateY(180deg);
@@ -1447,13 +1418,13 @@ hr {
   }
 
   .flip-card-back h3 {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem + 7px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) + 7px);
     margin-bottom: 20px;
   }
 
   .flip-card-back p {
-    font-size: calc(1rem + 1px);
+    font-size: calc(var(--body-font-size) + 1px);
   }
 
   /* Skills and tools card */
@@ -1475,8 +1446,8 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem - 3px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) - 3px);
     text-align: center;
   }
 }
@@ -1558,35 +1529,35 @@ hr {
   }
 
   .flip-card-front {
-    font-family: 'JetBrains Mono', monospace;
-    color: #111;
-    background-color: #fcbf49;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    font-family: var(--body-font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     text-align: center;
     padding: 40px 10px 10px 10px;
   }
 
   .flip-card-front h2 {
-    font-size: calc(1rem + 5px);
+    font-size: calc(var(--body-font-size) + 5px);
     margin-top: 15px;
   }
 
   .flip-card-front p {
-    font-size: calc(1rem + 2px);
+    font-size: calc(var(--body-font-size) + 2px);
   }
 
   .flip-card-back {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 'JetBrains Mono', monospace;
-    background-color: #fcbf49;
-    color: #111;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-family);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     padding: 30px;
     text-align: left;
     -webkit-transform: rotateY(180deg);
@@ -1594,12 +1565,12 @@ hr {
   }
 
   .flip-card-back h3 {
-    font-size: calc(1rem + 1px);
+    font-size: calc(var(--body-font-size) + 1px);
     margin-bottom: 10px;
   }
 
   .flip-card-back p {
-    font-size: calc(1rem - 5px);
+    font-size: calc(var(--body-font-size) - 5px);
   }
 
   /* Skills and tools card */
@@ -1628,8 +1599,8 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: calc(1rem - 5px);
+    font-family: var(--body-font-family);
+    font-size: calc(var(--body-font-size) - 5px);
     text-align: center;
   }
 }
@@ -1711,33 +1682,33 @@ hr {
   }
 
   .flip-card-front {
-    color: #111;
-    background-color: #fcbf49;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     text-align: center;
     padding: 40px 10px 10px 10px;
   }
 
   .flip-card-front h2 {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem + 3px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) + 3px);
     margin-top: 15px;
   }
 
   .flip-card-front p {
-    font-size: 1rem;
+    font-size: var(--body-font-size);
   }
 
   .flip-card-back {
-    background-color: #fcbf49;
-    color: #111;
-    border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
-    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    -webkit-box-shadow: 1px 1px 5px var(--text-color);
+            box-shadow: 1px 1px 5px var(--text-color);
+    border-radius: 20px;
     padding: 30px;
     text-align: left;
     -webkit-transform: rotateY(180deg);
@@ -1745,13 +1716,13 @@ hr {
   }
 
   .flip-card-back h3 {
-    font-family: 'Staatliches', serif;
-    font-size: 1rem;
+    font-family: var(--header-font-family);
+    font-size: var(--body-font-size);
     margin-bottom: 3px;
   }
 
   .flip-card-back p {
-    font-size: calc(1rem - 6px);
+    font-size: calc(var(--body-font-size) - 6px);
   }
 
   /* Skills and tools card */
@@ -1780,8 +1751,8 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'Staatliches', serif;
-    font-size: calc(1rem - 5px);
+    font-family: var(--header-font-family);
+    font-size: calc(var(--body-font-size) - 5px);
     text-align: center;
   }
 }
@@ -1794,9 +1765,9 @@ hr {
 
 @media screen and (max-width: 1440px) {
   .project_list_grid {
-    color: #111;
-    font-size: 1rem;
-    font-family: 'Staatliches', serif;
+    color: var(--text-color);
+    font-size: var(--body-font-size);
+    font-family: var(--header-font-family);
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1804,10 +1775,10 @@ hr {
   }
 
   .grid_item {
-    -webkit-box-shadow: 1px 1px 10px #111;
-            box-shadow: 1px 1px 10px #111;
-    border: 1px solid #525252;
-    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 10px var(--text-color);
+            box-shadow: 1px 1px 10px var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    border-radius: 20px;
     margin: 20px;
     padding: 20px 15px;
     -ms-grid-row-span: 2;
@@ -1816,26 +1787,26 @@ hr {
   }
 
   .grid_item h3 {
-    font-family: 'Staatliches', serif;
+    font-family: var(--header-font-family);
     margin-bottom: 10px;
   }
 
   .grid_item p {
-    font-size: 1rem;
+    font-size: var(--body-font-size);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .grid_item a {
-    font-size: calc(1rem - 3px);
+    font-size: calc(var(--body-font-size) - 3px);
   }
 
   .grid_item button {
     display: inline-block;
     margin-top: 20px;
-    font-size: 1rem;
-    font-family: 'Staatliches', serif;
+    font-size: var(--body-font-size);
+    font-family: var(--header-font-family);
   }
 
   .project_icons {
@@ -1875,7 +1846,7 @@ hr {
 
 @media screen and (max-width: 768px) {
   .project_list_grid {
-    color: #111;
+    color: var(--text-color);
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1883,10 +1854,10 @@ hr {
   }
 
   .grid_item {
-    -webkit-box-shadow: 1px 1px 10px #111;
-            box-shadow: 1px 1px 10px #111;
-    border: 1px solid #525252;
-    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 10px var(--text-color);
+            box-shadow: 1px 1px 10px var(--text-color);
+    border: 1px solid var(--accent-color-dark);
+    border-radius: 20px;
     margin: 20px;
     padding: 20px 15px;
     -ms-grid-row-span: 2;
@@ -1895,7 +1866,7 @@ hr {
   }
 
   .grid_item h3 {
-    font-family: 'Staatliches', serif;
+    font-family: var(--header-font-family);
     margin-bottom: 10px;
   }
 
@@ -1906,8 +1877,8 @@ hr {
   .grid_item button {
     display: inline-block;
     margin-top: 20px;
-    font-size: 1rem;
-    font-family: 'Staatliches', serif;
+    font-size: var(--body-font-size);
+    font-family: var(--header-font-family);
   }
 
   .project_icons {
@@ -1969,16 +1940,10 @@ hr {
     margin: 0 auto;
   }
 
-  .place {
-    font-size: 1rem;
-  }
-
-  .phone {
-    font-size: 1rem;
-  }
-
+  .place,
+  .phone,
   .gmail {
-    font-size: 1rem;
+    font-size: var(--body-font-size);
   }
 
   .place {
@@ -2061,16 +2026,10 @@ hr {
     margin-left: auto;
   }
 
-  .place {
-    font-size: 1rem;
-  }
-
-  .phone {
-    font-size: 1rem;
-  }
-
+  .place,
+  .phone,
   .gmail {
-    font-size: 1rem;
+    font-size: var(--body-font-size);
   }
 
   .place {
