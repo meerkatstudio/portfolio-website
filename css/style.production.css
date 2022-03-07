@@ -1,29 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 2 versions
-*/
-
-/* Order of document (consistently updated) */
-
-/* 
-
-1. Root variables
-2. Global code
-3. Local code
-3. Navbar
-3.1. /home
-3.2. /about-me
-3.3. /portfolio
-3.4. /contact
-4. Footer
-5. Media queries
-5.1. Navbar
-5.2. Contact form
-6. Keyframes
-6.1. /home
-
 */
 
 /* Begin root variables */
@@ -37,8 +11,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -70,15 +43,10 @@ a {
 nav {
   background-color: #edc655;
   font-family: "Staatliches", cursive;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   min-height: 8vh;
 }
 
@@ -106,12 +74,9 @@ nav {
 }
 
 .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 30%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .nav-links li {
@@ -137,8 +102,7 @@ nav {
   border-radius: 50px;
   padding: 7px 20px;
   border: 1px solid #525252;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .button_navbar:hover {
@@ -155,7 +119,6 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -173,13 +136,8 @@ nav {
 /* Following code is styling the intro and animation/image section on /home (temporary styling until text animation (code below) is ready) */
 
 .profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   width: 100%;
   height: 30vh;
   padding: 30px;
@@ -189,30 +147,19 @@ nav {
 
 #img {
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 /* Following code is styling the intro text on /home; temporary styling; will be replace by text-adjective animation (code below) at later stage */
 
 .profile_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Staatliches", cursive;
   margin: auto;
   padding: 30px;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
 }
 
 .profile_text_big {
@@ -233,8 +180,7 @@ nav {
   margin: auto;
   padding: 7px 40px;
   border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
+  box-shadow: 4px 4px 5px #111;
 }
 
 .button_two {
@@ -246,8 +192,7 @@ nav {
   margin: auto;
   padding: 7px 40px;
   border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
+  box-shadow: 4px 4px 5px #111;
 }
 
 .button_three {
@@ -259,8 +204,7 @@ nav {
   margin: auto;
   padding: 7px 40px;
   border: 0.5px solid #525252;
-  -webkit-box-shadow: 4px 4px 5px #111;
-          box-shadow: 4px 4px 5px #111;
+  box-shadow: 4px 4px 5px #111;
 }
 
 .button_one:hover {
@@ -287,13 +231,8 @@ nav {
 }
 
 .arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-top: 15px;
   width: 300px;
 }
@@ -313,8 +252,7 @@ nav {
 #white-underline {
   /* Underlining of adjective in intro text on /home */
   text-decoration: underline;
-  -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 
 /* Following code is animating the adjective in the intro text on /home; temporarily disabled */
@@ -404,41 +342,17 @@ nav {
 
 @supports (display: grid) {
   .grid_container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 600px 50px 600px;
     grid-template-rows: repeat(2, 600px);
-    -ms-grid-columns: 700px 120px 700px;
     grid-template-columns: repeat(2, 700px);
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-content: center;
+    justify-content: center;
     row-gap: 50px;
-    -webkit-column-gap: 120px;
-       -moz-column-gap: 120px;
-            column-gap: 120px;
+    column-gap: 120px;
     width: 75%;
     margin: auto;
     margin-top: 10vh;
     margin-bottom: 10vh;
-  }
-  .grid_container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  .grid_container > *:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(4) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
   }
 }
 
@@ -451,8 +365,7 @@ nav {
   background-color: transparent;
   width: 700px;
   height: 600px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -460,19 +373,13 @@ nav {
   width: 100%;
   height: 100%;
   text-align: center;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card_grid__item:hover .flip-card-inner {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -480,8 +387,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .flip-card-front {
@@ -489,8 +395,7 @@ nav {
   color: #111;
   background-color: #edc655;
   border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 5px #111;
-          box-shadow: 1px 1px 5px #111;
+  box-shadow: 1px 1px 5px #111;
   border-radius: 5px;
   text-align: center;
   padding-top: 35%;
@@ -511,13 +416,11 @@ nav {
   background-color: #edc655;
   color: #111;
   border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 5px #111;
-          box-shadow: 1px 1px 5px #111;
+  box-shadow: 1px 1px 5px #111;
   border-radius: 5px;
   padding: 60px;
   text-align: left;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-back h3 {
@@ -532,13 +435,8 @@ nav {
 /* Skills and tools card */
 
 .box_wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   margin: -15px;
 }
 
@@ -578,19 +476,16 @@ nav {
   color: #111;
   font-size: 1rem;
   font-family: "Staatliches", cursive;
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .grid_item {
-  -webkit-box-shadow: 1px 1px 10px #111;
-          box-shadow: 1px 1px 10px #111;
+  box-shadow: 1px 1px 10px #111;
   border: 1px solid #525252;
   border-radius: 10px;
   margin: 30px;
   padding: 20px 15px;
-  -ms-grid-row-span: 2;
   grid-row: span 2;
   grid-column: 1 / -1;
 }
@@ -619,19 +514,10 @@ nav {
 }
 
 .project_icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
 }
@@ -674,24 +560,16 @@ nav {
 }
 
 .contact-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 50px 40px;
   position: relative;
   max-width: 840px;
   border-radius: 10px;
   border: 1px solid #525252;
-  -webkit-box-shadow: 1px 1px 10px #111;
-          box-shadow: 1px 1px 10px #111;
+  box-shadow: 1px 1px 10px #111;
 }
 
 /* Begin left part of contact form */
@@ -712,8 +590,7 @@ nav {
   padding-left: 7px;
   letter-spacing: 1px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 5px #525252;
-          box-shadow: 1px 1px 5px #525252;
+  box-shadow: 1px 1px 5px #525252;
 }
 
 textarea {
@@ -725,8 +602,7 @@ textarea {
   padding-left: 7px;
   letter-spacing: 1px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 5px #525252;
-          box-shadow: 1px 1px 5px #525252;
+  box-shadow: 1px 1px 5px #525252;
 }
 
 .form-control {
@@ -739,25 +615,15 @@ textarea {
 
 .send-button {
   background-color: #111;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 17px;
   height: 37px;
   width: 400px;
   border-radius: 50px;
   overflow: hidden;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border: none;
 }
@@ -767,7 +633,6 @@ textarea {
   max-width: 50px;
   height: 32px;
   margin: auto;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -778,15 +643,18 @@ textarea {
   font-size: calc(1rem - 1px);
   margin: auto;
   letter-spacing: 2px;
+  position: absolute;
+  bottom: -23px;
+  left: -5px;
 }
 
 .alt-send-button:hover {
-  -webkit-transform: translate3d(0px, -30px, 0px);
-          transform: translate3d(0px, -30px, 0px);
+  transform: translate3d(0px, -30px, 0px);
   cursor: pointer;
 }
 
 .bi-send-fill {
+  position:relative;
   font-size: 20px;
 }
 
@@ -838,8 +706,7 @@ textarea {
 .contact-text a {
   color: #111;
   text-decoration: none;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .contact-text a:hover {
@@ -882,19 +749,10 @@ hr {
 
 .contact-me-text {
   font-family: "Staatliches", cursive;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
@@ -953,23 +811,12 @@ hr {
     right: 0;
     height: 92vh;
     top: 8vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
+    transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   }
 
   .nav-links li {
@@ -992,41 +839,23 @@ hr {
 }
 
 .nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
+  transform: translateX(0%);
 }
 
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    transform: translateX(50px);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
@@ -1034,8 +863,7 @@ hr {
 }
 
 .toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Begin media queries /home */
@@ -1192,37 +1020,15 @@ hr {
 
 @media all and (max-width: 1440px) {
   .grid_container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 10px 1fr;
     grid-template-rows: repeat(2, 1fr);
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-content: center;
+    justify-content: center;
     gap: 10px;
     width: 100%;
     margin-top: 5vh;
     margin-bottom: 5vh;
-  }
-  .grid_container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  .grid_container > *:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(4) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
   }
 
   .flip-card_grid__item {
@@ -1230,8 +1036,7 @@ hr {
     background-color: transparent;
     width: 500px;
     height: 500px;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    perspective: 1000px;
   }
 
   .flip-card-inner {
@@ -1239,19 +1044,13 @@ hr {
     width: 100%;
     height: 100%;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    transition: transform 0.6s, -webkit-transform 0.6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .flip-card_grid__item:hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-front,
@@ -1259,8 +1058,7 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .flip-card-front {
@@ -1268,8 +1066,7 @@ hr {
     color: #111;
     background-color: #edc655;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     text-align: center;
     padding-top: 35%;
@@ -1290,13 +1087,11 @@ hr {
     background-color: #edc655;
     color: #111;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     padding: 30px;
     text-align: left;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-back h3 {
@@ -1311,13 +1106,8 @@ hr {
   /* Skills and tools card */
 
   .box_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
     padding: 0 0 15px 15px;
   }
 
@@ -1339,37 +1129,15 @@ hr {
 
 @media all and (max-width: 1024px) {
   .grid_container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 30px 1fr 30px 1fr 30px 1fr;
     grid-template-rows: repeat(4, 1fr);
-    -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-content: center;
+    justify-content: center;
     gap: 30px;
     width: 75%;
     margin-top: 5vh;
     margin-bottom: 5vh;
-  }
-  .grid_container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(3) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(4) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
   }
 
   .flip-card_grid__item {
@@ -1377,8 +1145,7 @@ hr {
     background-color: transparent;
     width: 450px;
     height: 450px;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    perspective: 1000px;
   }
 
   .flip-card-inner {
@@ -1386,19 +1153,13 @@ hr {
     width: 100%;
     height: 100%;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    transition: transform 0.6s, -webkit-transform 0.6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .flip-card_grid__item:hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-front,
@@ -1406,8 +1167,7 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .flip-card-front {
@@ -1415,8 +1175,7 @@ hr {
     color: #111;
     background-color: #edc655;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     text-align: center;
     padding-top: 40%;
@@ -1437,13 +1196,11 @@ hr {
     background-color: #edc655;
     color: #111;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     padding: 30px;
     text-align: left;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-back h3 {
@@ -1458,13 +1215,8 @@ hr {
   /* Skills and tools card */
 
   .box_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
     padding: 10px;
   }
 
@@ -1484,38 +1236,16 @@ hr {
 
 @media all and (max-width: 900px) {
   .grid_container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-rows: repeat(4, 1fr);
-    -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-content: center;
+    justify-content: center;
     gap: 20px;
     width: 75%;
     height: 100%;
     margin-top: 5vh;
     margin-bottom: 2vh;
-  }
-  .grid_container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(3) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(4) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
   }
 
   .flip-card_grid__item {
@@ -1523,8 +1253,7 @@ hr {
     background-color: transparent;
     width: 500px;
     height: 200px;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    perspective: 1000px;
   }
 
   .flip-card-inner {
@@ -1532,19 +1261,13 @@ hr {
     width: 100%;
     height: 100%;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    transition: transform 0.6s, -webkit-transform 0.6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .flip-card_grid__item:hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-front,
@@ -1552,8 +1275,7 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .flip-card-front {
@@ -1561,8 +1283,7 @@ hr {
     color: #111;
     background-color: #edc655;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     text-align: center;
     padding: 40px 10px 10px 10px;
@@ -1583,13 +1304,11 @@ hr {
     background-color: #edc655;
     color: #111;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     padding: 30px;
     text-align: left;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-back h3 {
@@ -1604,18 +1323,10 @@ hr {
   /* Skills and tools card */
 
   .box_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
     margin: -20px;
   }
 
@@ -1637,38 +1348,16 @@ hr {
 
 @media all and (max-width: 550px) {
   .grid_container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 5px 1fr 5px 1fr 5px 1fr;
     grid-template-rows: repeat(4, 1fr);
-    -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-content: center;
+    justify-content: center;
     gap: 5px;
     width: 75%;
     height: 82vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
-  }
-  .grid_container > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(3) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-  .grid_container > *:nth-child(4) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
   }
 
   .flip-card_grid__item {
@@ -1676,8 +1365,7 @@ hr {
     background-color: transparent;
     width: 400px;
     height: 200px;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    perspective: 1000px;
   }
 
   .flip-card-inner {
@@ -1685,19 +1373,13 @@ hr {
     width: 100%;
     height: 100%;
     text-align: center;
-    -webkit-transition: -webkit-transform 0.6s;
-    transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    transition: transform 0.6s, -webkit-transform 0.6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .flip-card_grid__item:hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-front,
@@ -1705,8 +1387,7 @@ hr {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .flip-card-front {
@@ -1714,8 +1395,7 @@ hr {
     color: #111;
     background-color: #edc655;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     text-align: center;
     padding: 40px 10px 10px 10px;
@@ -1736,13 +1416,11 @@ hr {
     background-color: #edc655;
     color: #111;
     border: 1px solid #525252;
-    -webkit-box-shadow: 1px 1px 5px #111;
-            box-shadow: 1px 1px 5px #111;
+    box-shadow: 1px 1px 5px #111;
     border-radius: 5px;
     padding: 30px;
     text-align: left;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-back h3 {
@@ -1757,18 +1435,10 @@ hr {
   /* Skills and tools card */
 
   .box_wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
     margin: -25px;
   }
 
@@ -1797,20 +1467,17 @@ hr {
     color: #111;
     font-size: 1rem;
     font-family: "Staatliches", cursive;
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 30px;
   }
 
   .grid_item {
-    -webkit-box-shadow: 1px 1px 10px #111;
-            box-shadow: 1px 1px 10px #111;
+    box-shadow: 1px 1px 10px #111;
     border: 1px solid #525252;
     border-radius: 10px;
     margin: 20px;
     padding: 20px 15px;
-    -ms-grid-row-span: 2;
     grid-row: span 2;
     grid-column: 1 / -1;
   }
@@ -1838,19 +1505,10 @@ hr {
   }
 
   .project_icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
   }
@@ -1877,20 +1535,17 @@ hr {
     color: #111;
     font-size: 1rem;
     font-family: "Staatliches", cursive;
-    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 30px;
   }
 
   .grid_item {
-    -webkit-box-shadow: 1px 1px 10px #111;
-            box-shadow: 1px 1px 10px #111;
+    box-shadow: 1px 1px 10px #111;
     border: 1px solid #525252;
     border-radius: 10px;
     margin: 20px;
     padding: 20px 15px;
-    -ms-grid-row-span: 2;
     grid-row: span 2;
     grid-column: 1 / -1;
   }
@@ -1911,19 +1566,10 @@ hr {
   }
 
   .project_icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
   }
@@ -1951,16 +1597,9 @@ hr {
 
 @media screen and (max-width: 1200px) {
   .contact-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     max-width: 600px;
   }
 
@@ -2024,16 +1663,9 @@ hr {
 
 @media screen and (max-width: 768px) {
   .contact-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     max-width: 450px;
   }
 
@@ -2052,9 +1684,7 @@ hr {
 
   .send-button {
     max-width: 300px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 
   .alt-send-button {
