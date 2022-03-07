@@ -210,7 +210,7 @@ nav {
 .button_three {
   background-color: var(--primary-color);
   color: var(--text-color);
-  font-family: var(--body-font-family);
+  font-family: var(--header-font-family);
   font-size: calc(var(--body-font-size) + 10px);
   border-radius: 3px;
   margin: auto;
@@ -243,7 +243,7 @@ nav {
 
 .arrow_text {
   font-size: calc(var(--body-font-size) - 1px);
-  font-family: var(--body-font-family);
+  font-family: var(--header-font-family);
   color: var(--text-color);
   margin-bottom: 5px;
   margin-left: 20px;
@@ -402,12 +402,11 @@ nav {
   box-shadow: 1px 1px 5px var(--text-color);
   border-radius: 5px;
   text-align: center;
-  padding-top: 35%;
-  padding-bottom: 40%;
+  padding: 35% 20% 40% 20%;
 }
 
 .flip-card-front h2 {
-  font-size: calc(var(--body-font-size) + 25px);
+  font-family: var(--h2-font-family);
 }
 
 .flip-card-front p {
@@ -415,8 +414,6 @@ nav {
 }
 
 .flip-card-back {
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-family);
   background-color: var(--primary-color);
   color: var(--text-color);
   border: 1px solid var(--accent-color-dark);
@@ -428,7 +425,8 @@ nav {
 }
 
 .flip-card-back h3 {
-  font-size: calc(var(--body-font-size) + 15px);
+  font-size: var(--h3-font-size);
+  font-family: var(--header-font-family);
   margin-bottom: 20px;
 }
 
@@ -452,7 +450,7 @@ nav {
 }
 
 .box_icon p {
-  font-family: var(--body-font-family);
+  font-family: var(--header-font-family);
   font-size: var(--body-font-size);
   margin-top: 15px;
   text-align: center;
@@ -478,8 +476,6 @@ nav {
 
 .project_list_grid {
   color: var(--text-color);
-  font-size: var(--body-font-size);
-  font-family: var(--header-font-family);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -495,10 +491,12 @@ nav {
 }
 
 .grid_item h3 {
+  font-family: var(--header-font-family);
   margin-bottom: 15px;
 }
 
 .gid_item p {
+  font-family: var(--body-font-family);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -506,7 +504,7 @@ nav {
 
 .grid_item a {
   font-size: var(--body-font-size);
-  font-family: var(--body-font-family);
+  font-family: var(--header-font-family);
   display: inline;
   line-height: 60px;
 }
