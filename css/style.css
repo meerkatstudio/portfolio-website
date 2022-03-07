@@ -28,9 +28,9 @@
   --primary-color: #fcbf49;
   --accent-color-light: #fff;
   --accent-color-dark: #525252;
-  --body-font-family: "Staatliches", cursive;
-  --header-font-family: "Staatliches", cursive;
-  --button-font-family: "Staatliches", cursive;
+  --body-font-family: 'JetBrains Mono', monospace;
+  --header-font-family: 'Staatliches', serif;
+  --button-font-family: 'Staatliches', serif;
   --body-font-size: 1rem;
   --h1-font-size: 32px;
   --h2-font-size: 24px;
