@@ -497,7 +497,7 @@ nav {
 }
 
 .flip-card-front h2 {
-  font-family: undefined;
+  font-family: 'Staatliches', serif;
 }
 
 .flip-card-front p {
@@ -1266,7 +1266,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: 'JetBrains Mono', monospace;
     color: #111;
     background-color: #fcbf49;
     border: 1px solid #525252;
@@ -1280,6 +1279,7 @@ hr {
 
   .flip-card-front h2 {
     font-size: calc(1rem + 15px);
+    font-family: 'Staatliches', serif;
   }
 
   .flip-card-front p {
@@ -1287,8 +1287,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 'JetBrains Mono', monospace;
     background-color: #fcbf49;
     color: #111;
     border: 1px solid #525252;
@@ -1302,11 +1300,13 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem + 10px);
     margin-bottom: 20px;
   }
 
   .flip-card-back p {
+    font-family: 'JetBrains Mono', monospace;
     font-size: calc(1rem + 3px);
   }
 
@@ -1331,7 +1331,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Staatliches', serif;
     font-size: 1rem;
     text-align: center;
   }
@@ -1413,7 +1413,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: 'JetBrains Mono', monospace;
     color: #111;
     background-color: #fcbf49;
     border: 1px solid #525252;
@@ -1426,6 +1425,7 @@ hr {
   }
 
   .flip-card-front h2 {
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem + 12px);
   }
 
@@ -1434,8 +1434,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 'JetBrains Mono', monospace;
     background-color: #fcbf49;
     color: #111;
     border: 1px solid #525252;
@@ -1449,6 +1447,7 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem + 7px);
     margin-bottom: 20px;
   }
@@ -1476,7 +1475,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem - 3px);
     text-align: center;
   }
@@ -1712,7 +1711,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: 'JetBrains Mono', monospace;
     color: #111;
     background-color: #fcbf49;
     border: 1px solid #525252;
@@ -1724,6 +1722,7 @@ hr {
   }
 
   .flip-card-front h2 {
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem + 3px);
     margin-top: 15px;
   }
@@ -1733,8 +1732,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 'JetBrains Mono', monospace;
     background-color: #fcbf49;
     color: #111;
     border: 1px solid #525252;
@@ -1748,6 +1745,7 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: 'Staatliches', serif;
     font-size: 1rem;
     margin-bottom: 3px;
   }
@@ -1782,7 +1780,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Staatliches', serif;
     font-size: calc(1rem - 5px);
     text-align: center;
   }
@@ -1818,6 +1816,7 @@ hr {
   }
 
   .grid_item h3 {
+    font-family: 'Staatliches', serif;
     margin-bottom: 10px;
   }
 
@@ -1836,7 +1835,7 @@ hr {
     display: inline-block;
     margin-top: 20px;
     font-size: 1rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Staatliches', serif;
   }
 
   .project_icons {
@@ -1877,8 +1876,6 @@ hr {
 @media screen and (max-width: 768px) {
   .project_list_grid {
     color: #111;
-    font-size: 1rem;
-    font-family: 'Staatliches', serif;
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1898,6 +1895,7 @@ hr {
   }
 
   .grid_item h3 {
+    font-family: 'Staatliches', serif;
     margin-bottom: 10px;
   }
 
@@ -1909,7 +1907,7 @@ hr {
     display: inline-block;
     margin-top: 20px;
     font-size: 1rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Staatliches', serif;
   }
 
   .project_icons {
@@ -2132,4 +2130,3 @@ hr {
     top: -360px;
   }
 } */
-

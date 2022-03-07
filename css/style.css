@@ -406,7 +406,7 @@ nav {
 }
 
 .flip-card-front h2 {
-  font-family: var(--h2-font-family);
+  font-family: var(--header-font-family);
 }
 
 .flip-card-front p {
@@ -1053,7 +1053,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: var(--body-font-family);
     color: var(--text-color);
     background-color: var(--primary-color);
     border: 1px solid var(--accent-color-dark);
@@ -1066,6 +1065,7 @@ hr {
 
   .flip-card-front h2 {
     font-size: calc(var(--body-font-size) + 15px);
+    font-family: var(--header-font-family);
   }
 
   .flip-card-front p {
@@ -1073,8 +1073,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-family);
     background-color: var(--primary-color);
     color: var(--text-color);
     border: 1px solid var(--accent-color-dark);
@@ -1086,11 +1084,13 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) + 10px);
     margin-bottom: 20px;
   }
 
   .flip-card-back p {
+    font-family: var(--body-font-family);
     font-size: calc(var(--body-font-size) + 3px);
   }
 
@@ -1110,7 +1110,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: var(--body-font-family);
+    font-family: var(--header-font-family);
     font-size: var(--body-font-size);
     text-align: center;
   }
@@ -1162,7 +1162,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: var(--body-font-family);
     color: var(--text-color);
     background-color: var(--primary-color);
     border: 1px solid var(--accent-color-dark);
@@ -1174,6 +1173,7 @@ hr {
   }
 
   .flip-card-front h2 {
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) + 12px);
   }
 
@@ -1182,8 +1182,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-family);
     background-color: var(--primary-color);
     color: var(--text-color);
     border: 1px solid var(--accent-color-dark);
@@ -1195,6 +1193,7 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) + 7px);
     margin-bottom: 20px;
   }
@@ -1217,7 +1216,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: var(--body-font-family);
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) - 3px);
     text-align: center;
   }
@@ -1382,7 +1381,6 @@ hr {
   }
 
   .flip-card-front {
-    font-family: var(--body-font-family);
     color: var(--text-color);
     background-color: var(--primary-color);
     border: 1px solid var(--accent-color-dark);
@@ -1393,6 +1391,7 @@ hr {
   }
 
   .flip-card-front h2 {
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) + 3px);
     margin-top: 15px;
   }
@@ -1402,8 +1401,6 @@ hr {
   }
 
   .flip-card-back {
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-family);
     background-color: var(--primary-color);
     color: var(--text-color);
     border: 1px solid var(--accent-color-dark);
@@ -1415,6 +1412,7 @@ hr {
   }
 
   .flip-card-back h3 {
+    font-family: var(--header-font-family);
     font-size: var(--body-font-size);
     margin-bottom: 3px;
   }
@@ -1441,7 +1439,7 @@ hr {
   }
 
   .box_icon p {
-    font-family: var(--body-font-family);
+    font-family: var(--header-font-family);
     font-size: calc(var(--body-font-size) - 5px);
     text-align: center;
   }
@@ -1474,6 +1472,7 @@ hr {
   }
 
   .grid_item h3 {
+    font-family: var(--header-font-family);
     margin-bottom: 10px;
   }
 
@@ -1492,7 +1491,7 @@ hr {
     display: inline-block;
     margin-top: 20px;
     font-size: var(--body-font-size);
-    font-family: var(--body-font-family);
+    font-family: var(--header-font-family);
   }
 
   .project_icons {
@@ -1524,8 +1523,6 @@ hr {
 @media screen and (max-width: 768px) {
   .project_list_grid {
     color: var(--text-color);
-    font-size: var(--body-font-size);
-    font-family: var(--header-font-family);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 30px;
@@ -1542,6 +1539,7 @@ hr {
   }
 
   .grid_item h3 {
+    font-family: var(--header-font-family);
     margin-bottom: 10px;
   }
 
@@ -1553,7 +1551,7 @@ hr {
     display: inline-block;
     margin-top: 20px;
     font-size: var(--body-font-size);
-    font-family: var(--body-font-family);
+    font-family: var(--header-font-family);
   }
 
   .project_icons {
